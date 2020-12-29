@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6Z-wo-kk8">
-                                <rect key="frame" x="154" y="152" width="240" height="146"/>
+                                <rect key="frame" x="142" y="44" width="243" height="191"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
@@ -35,34 +35,52 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCL-bX-Y4d">
-                                <rect key="frame" x="219" y="348" width="166" height="67"/>
+                                <rect key="frame" x="118" y="243" width="166" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="截圖 2020-12-29 下午8.36.17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="下一題"/>
                                 <connections>
                                     <action selector="nextQuesrion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V5I-cf-tzW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wht-DR-zmg">
-                                <rect key="frame" x="125" y="472" width="165" height="69"/>
+                                <rect key="frame" x="125" y="825" width="165" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="截圖 2020-12-29 下午8.42.59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="再一次">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
                                 <connections>
                                     <action selector="again:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fyb-QT-Vek"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="Hkv-il-n88">
-                                <rect key="frame" x="0.0" y="156" width="146" height="116"/>
+                                <rect key="frame" x="20" y="44" width="114" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images-2" translatesAutoresizingMaskIntoConstraints="NO" id="TCa-yk-P4M">
                                 <rect key="frame" x="248" y="638" width="146" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fMq-qS-dTc">
-                                <rect key="frame" x="20" y="348" width="178" height="67"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入答案" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AIg-fV-hLJ">
+                                <rect key="frame" x="71" y="318" width="273" height="57.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="顯示答案.001">
-                                    <attributedString key="attributedTitle"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fMq-qS-dTc">
+                                <rect key="frame" x="118" y="396" width="178" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="看答案">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name=".PingFangTC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <action selector="answerView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lnZ-rG-80T"/>
@@ -75,6 +93,7 @@
                     <connections>
                         <outlet property="answerLabel" destination="K0F-Tm-lYD" id="QEN-ve-0l6"/>
                         <outlet property="questionLabel" destination="c6Z-wo-kk8" id="pw8-D7-zKg"/>
+                        <outlet property="twxField" destination="AIg-fV-hLJ" id="jrk-dQ-k07"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -86,14 +105,14 @@
         <image name="images" width="202" height="180"/>
         <image name="images-2" width="215" height="215"/>
         <image name="photo-1549189189-c26639dfc999" width="934" height="1401"/>
-        <image name="截圖 2020-12-29 下午8.36.17" width="502" height="266"/>
-        <image name="截圖 2020-12-29 下午8.42.59" width="524" height="232"/>
-        <image name="顯示答案.001" width="320" height="123"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

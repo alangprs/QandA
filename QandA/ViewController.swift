@@ -6,6 +6,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel! //顯示問題
     @IBOutlet weak var answerLabel: UILabel! //顯示答案
+    @IBOutlet weak var twxField: UITextField! //輸入答案
     
     var questions = [Questions]()
     var index = 0 //存questions陣列的題目編號
@@ -44,21 +45,30 @@ class ViewController: UIViewController {
     }
     //下一題按鈕
     @IBAction func nextQuesrion(_ sender: UIButton) {
-        //題目如果少於questions陣列最大數-1
-        if index < questions.count - 1{ // count＝最大數
-            index = index + 1
-            題目跟答案()
-            
+        index = index + 1
+            if index == questions.count{ // count＝最大數
+            index = 0
+            questions.shuffle()
         }
+        題目跟答案()
+
     }
     
     @IBAction func answerView(_  sender: Any) { //顯示答案按鈕
-        answerLabel.text = questions[index].答案
+        if twxField.text == questions[index].答案{
+            answerLabel.text = "恭喜答對，答案就是\(questions[index].答案)"
+        }else{
+            answerLabel.text = "答錯囉，你再想想"
+        }
+        twxField.text = ""
+        view.endEditing(true) //收鍵盤
+
     }
     
     @IBAction func again(_ sender: Any) { //再一次按鈕
         questions.shuffle() //隨機亂數排列題目
         題目跟答案()
+        twxField.text = ""
     }
    
     
