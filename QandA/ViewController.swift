@@ -6,7 +6,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel! //顯示問題
     @IBOutlet weak var answerLabel: UILabel! //顯示答案
-    @IBOutlet weak var questionNumber: UILabel! //顯示問題號碼
     
     var questions = [Questions]()
     var index = 0 //存questions陣列的題目編號
@@ -36,6 +35,7 @@ class ViewController: UIViewController {
         let questions6 = Questions(問題: "台灣唯一不靠海的城市是？", 答案: "南投")
         questions.append(questions6)
         let questions7 = Questions(問題: "台灣保育戰地的國家公園為哪座？", 答案: "金門")
+        questions.shuffle() //隨機亂數排列題目
         questions.append(questions7)
         
         題目跟答案()
